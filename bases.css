@@ -1,0 +1,161 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+body * {
+    align-items: center;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+  position: absolute;
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+#title {
+  color: white;
+  background-color: rgb(81, 115, 119);
+  font-size: 500%;
+  width:100%;
+  display: none;
+}
+
+#title *{
+  transition: 0.5s;
+}
+
+#position{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+#center {
+  color: rgb(25,25,25);
+  letter-spacing: 150%;
+  position: fixed;
+  width: 41em;
+  height: 30em;
+  margin: 6% 30%;
+  background-color: rgb(214,214,214);
+  padding: 1%;
+  transition: 1s;
+}
+
+#center h1, #center h2, #center h3, #center h4{
+  transition: 0s;
+}
+
+*{
+  transition: 1s;
+  transition: border-width 1s top 2s;
+  transition-timing-function: ease-in-out;
+}
+
+#photo{
+  width: 40em;
+  background-color: #8f8f8f;
+  border: solid;
+  border-color: #8f8f8f;
+}
+
+#photo *{
+  transition: 1s;
+}
+
+#img1 , #img2 , #wrapper1 , #wrapper2{
+  width: 100%;
+}
+
+
+
+#footer{
+  position: absolute;
+  width: 50%;
+  bottom: 0;
+  left: 25%;
+  margin: 2em;
+}
+
+
+.button {
+  width: 33.1%;
+  margin-left: -5px;
+  border: none;
+  color: #ffffff;
+  font-size: 34px;
+  background: #8f8f8f;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #000000;
+  text-decoration: none;
+}
+
+.button2 {
+  width: 25%;
+  height: 2em;
+  border: none;
+  color: #ffffff;
+  background: #8f8f8f;
+  text-decoration: none;
+}
+
+.button2:hover {
+  background: #000000;
+  text-decoration: none;
+}
+
+
+.pageOption {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  width: 40em; height: 27em;
+}
+.option, .option img { width: 100%; height: 100%; }
+.option {
+  overflow: hidden;
+  position: absolute;
+  /* arctan(27 / 40) = 34.01935deg
+   * need to skew by 90deg - 34.01935deg = 55.98065deg
+  */
+
+}
+
+.option:first-child {
+
+  transform-origin: 100% 0;
+}
+.option:last-child {
+  transform: skewX(-55.98deg);
+
+  transform-origin: 0 100%;
+}
+.option img {transition: .5s; }
+.option img:hover { opacity: 1; }
+.option img, .option:after {
+  transform: skewX(55.98deg);
+  transform-origin: inherit;
+}
+.option:after {
+  position: absolute;
+  margin: .5em 1.65em;
+  color: rgb(25,25,25);
+  font: 500 1.25em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  content: attr(data-inf);
+}
+.option:first-child:after { top: 0; left: 0; }
+.option:last-child:after { right: 0; bottom: 0; }
